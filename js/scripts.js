@@ -29,12 +29,11 @@ $(document).ready(function() {
     var result = coinChange(inputMoney);
 
     $(".quarters").text(result[0]);
-    $(".dimes").text(results[1]);
-    $(".nickels").text(results[2]);
-    $(".pennies").text(results[3]);
-    debugger;
+    $(".whitneys").text(result[1]);
+    $(".nickels").text(result[2]);
+    $(".pennies").text(result[3]);
 
-    // $("#result").show();
-    // event.preventDefault();
+    $("#result").show();
+    event.preventDefault();
   });
 });
