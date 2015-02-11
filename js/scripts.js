@@ -1,4 +1,7 @@
-var coinChange = function(money) {
+var coinChange = function(input_money) {
+  var interim_money = input_money.replace(/\$/, "");
+  var dope_money = interim_money.replace(/\./, "");
+  var money = parseInt(dope_money);
   var changies = [0, 0, 0, 0];
 
   while (money >= 25) {
@@ -25,7 +28,7 @@ var coinChange = function(money) {
 
 $(document).ready(function() {
   $("form#monies").submit(function(event) {
-    var inputMoney = parseInt($("input#user_monies").val());
+    var inputMoney = $("input#user_monies").val();
     var result = coinChange(inputMoney);
 
     $(".quarters").text(result[0]);
